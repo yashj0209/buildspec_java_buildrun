@@ -3,11 +3,11 @@ component: build
 timeoutInSeconds: 4000
 runAs: root
 shell: bash
-#env:
-#  variables:
-#    var_a : "15"
-#  exportedVariables:
-#    - var_a
+env:
+  variables:
+    var_a : "15"
+  exportedVariables:
+    - var_a
     
 steps:
   - type: Command
@@ -27,7 +27,6 @@ steps:
     timeoutInSeconds: 2000
     command: |
       cd src
-      ${var_a} = 12
       java com.example.HelloWorld ${var_a}
     onFailure:
       - type: Command
