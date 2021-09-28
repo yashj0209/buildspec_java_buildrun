@@ -8,7 +8,8 @@ steps:
     name: "Build Hello World"
     timeoutInSeconds: 2000
     command: |
-      cd src/com/example/
+      cd src/com/example
+      ls
       javac HelloWorld.java
     onFailure:
       - type: Command
@@ -21,7 +22,7 @@ steps:
      timeoutInSeconds: 2000
      command: |
        cd src
-       java HelloWorld
+       java com.example.HelloWorld
      onFailure:
        - type: Command
          command: |
