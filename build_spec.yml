@@ -8,6 +8,7 @@ steps:
     name: "Build Hello World"
     timeoutInSeconds: 2000
     command: |
+      ls
       cd src/com/example
       ls
       javac HelloWorld.java
@@ -18,14 +19,14 @@ steps:
         timeoutInSeconds: 200
         runAs: root
   - type: Command
-     name: "Print Hello World"
-     timeoutInSeconds: 2000
-     command: |
-       cd src
-       java com.example.HelloWorld
-     onFailure:
-       - type: Command
-         command: |
-           echo "Running failed"
-         timeoutInSeconds: 200
-         runAs: root
+    name: "Print Hello World"
+    timeoutInSeconds: 2000
+    command: |
+      cd src
+      java com.example.HelloWorld
+    onFailure:
+      - type: Command
+        command: |
+          echo "Running failed"
+        timeoutInSeconds: 200
+        runAs: root
