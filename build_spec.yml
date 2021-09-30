@@ -3,11 +3,11 @@ component: build
 timeoutInSeconds: 4000
 runAs: root
 shell: bash
-env:
-  variables:
-    var_a : "15"
-  exportedVariables:
-    - var_a
+#env:
+#  variables:
+#    var_a : "15"
+#  exportedVariables:
+#    - var_a
     
 steps:
   - type: Command
