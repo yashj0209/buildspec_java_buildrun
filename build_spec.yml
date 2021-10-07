@@ -27,7 +27,7 @@ steps:
     timeoutInSeconds: 2000
     command: |
       cd src
-      java com.example.HelloWorld ${var_a}
+      java com.example.HelloWorld ${var_b}
     onFailure:
       - type: Command
         command: |
