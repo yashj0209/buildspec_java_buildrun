@@ -3,10 +3,7 @@ component: build
 timeoutInSeconds: 4000
 runAs: root
 shell: bash
-env: 
-  exportedVariables:
-    - var_b
-    
+
 steps:
   - type: Command
     name: "Build Hello World"
