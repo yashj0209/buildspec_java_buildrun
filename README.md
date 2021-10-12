@@ -90,9 +90,10 @@ On the terminal, enter this command from the directory where ```createBuildRun.j
 1. Go to Build History
 2. Click on the latest Build Run, named ```build#1```
 <img src = "build_history.png"/>
-3. In the output logs on the right hand side of the screen, under ``` BUILD_SPEC_STEP : Print Hello World ```, observe the output. 
+3. In the output logs on the right hand side of the screen, under ```BUILD_SPEC_STEP : Print Hello World```, observe the output. 
 <img src ="output_logs.png"/>
-4. The ouput shown as below is : Hello World from OCI with argument *** 25. 
+4. The ouput shown as below is : ```Hello World from OCI with argument *** 25``` 
+
 
 This demonstrates that Build Run arguments take precedence over the Build Pipeline Parameters. 
 
