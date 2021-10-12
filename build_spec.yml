@@ -3,7 +3,10 @@ component: build
 timeoutInSeconds: 4000
 runAs: root
 shell: bash
-
+env:
+  exportedVariables:
+    - var_b
+    
 steps:
   - type: Command
     name: "Build Hello World"
@@ -22,7 +25,7 @@ steps:
     timeoutInSeconds: 2000
     command: |
       cd src
-      java com.example.HelloWorld ${var_b}
+      java com.example.HelloWorld $var_b
     onFailure:
       - type: Command
         command: |
